@@ -1,0 +1,64 @@
+﻿@page 
+@model LegionCommand.Pages.Units.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Unit</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Unit.Name" class="control-label"></label>
+                <input asp-for="Unit.Name" class="form-control" />
+                <span asp-validation-for="Unit.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit.Description" class="control-label"></label>
+                <input asp-for="Unit.Description" class="form-control" />
+                <span asp-validation-for="Unit.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit.Rank" class="control-label"></label>
+                <input asp-for="Unit.Rank" class="form-control" />
+                <span asp-validation-for="Unit.Rank" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit.Points" class="control-label"></label>
+                <input asp-for="Unit.Points" class="form-control" />
+                <span asp-validation-for="Unit.Points" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit.UnitCard" class="control-label"></label>
+                <input asp-for="Unit.UnitCard" class="form-control" />
+                <span asp-validation-for="Unit.UnitCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit.Portrait" class="control-label"></label>
+                <input asp-for="Unit.Portrait" class="form-control" />
+                <span asp-validation-for="Unit.Portrait" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit.Upgrades" class="control-label"></label>
+                <input asp-for="Unit.Upgrades" class="form-control" />
+                <span asp-validation-for="Unit.Upgrades" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
