@@ -1,9 +1,22 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using LegionCommand.Data;
+using LegionCommand.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<LegionCommandContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("LegionCommandContext") ?? throw new InvalidOperationException("Connection string 'LegionCommandContext' not found.")));
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
