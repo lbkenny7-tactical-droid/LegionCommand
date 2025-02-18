@@ -49,6 +49,11 @@
                 <span asp-validation-for="Unit.Upgrades" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Unit.Faction" class="control-label"></label>
+                <input asp-for="Unit.Faction" class="form-control" />
+                <span asp-validation-for="Unit.Faction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>

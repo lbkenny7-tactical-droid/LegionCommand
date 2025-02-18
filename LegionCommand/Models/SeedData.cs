@@ -31,7 +31,8 @@ namespace LegionCommand.Models
                         Points = 165,
                         UnitCard = "count_dooku_unitcard.jpeg",
                         Portrait = "count_dooku_portrait.jpeg",
-                        Upgrades = "force,force,force,command"
+                        Upgrades = "force,force,force,command",
+                        Faction = "CIS"
                     },
 
                     new Unit
@@ -42,7 +43,8 @@ namespace LegionCommand.Models
                         Points = 130,
                         UnitCard = "general_grievous_unitcard.jpeg",
                         Portrait = "general_grievous_portrait.jpeg",
-                        Upgrades = "command,command,training,gear"
+                        Upgrades = "command,command,training,gear",
+                        Faction = "CIS"
                     },
 
                     new Unit
@@ -53,7 +55,8 @@ namespace LegionCommand.Models
                         Points = 80,
                         UnitCard = "poggle_unitcard.jpeg",
                         Portrait = "poggle_portrait.jpeg",
-                        Upgrades = "command,command,comms,gear"
+                        Upgrades = "command,command,comms,gear",
+                        Faction = "CIS"
                     },
 
                     new Unit
@@ -64,7 +67,8 @@ namespace LegionCommand.Models
                         Points = 85,
                         UnitCard = "poggle_unitcard.jpeg",
                         Portrait = "poggle_portrait.jpeg",
-                        Upgrades = "command,command,command,comms,gear"
+                        Upgrades = "command,command,command,comms,gear",
+                        Faction = "CIS"
                     }
                 );
                 context.SaveChanges();
